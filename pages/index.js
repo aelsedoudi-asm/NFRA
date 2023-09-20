@@ -8,21 +8,30 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Next.js Toolbox</title>
+        <title>NFRA Deep Dive</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <Header title="Next.js Toolbox" />
-        <hr />
-        <p className="description">
-          Here's an example of a Netlify Form! When you fill this out, the
-          submissions can be found in the Netlify Admin site.
-        </p>
-        <FeedbackForm />
-        <JokeBlock />
+      <div class="sky">
+
+        </div>
+        <div class="ocean">
+          <div class="bubble bubble--1"></div>
+          <div class="bubble bubble--2"></div>
+          <div class="bubble bubble--3"></div>
+          <div class="bubble bubble--4"></div>
+          <div class="bubble bubble--5"></div>
+          <div class="bubble bubble--6"></div>
+          <div class="bubble bubble--7"></div>
+          <div class="bubble bubble--8"></div>
+          <div class="bubble bubble--9"></div>
+          <div class="bubble bubble--10"></div>
+          <div class="bubble bubble--11"></div>
+          <div class="bubble bubble--12"></div>
+          <div id="penguin"></div>
+        </div>
       </main>
-      <Footer />
     </div>
   );
 }
