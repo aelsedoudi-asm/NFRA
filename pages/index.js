@@ -13,39 +13,37 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <div class="sky">
-          <div id="albertsons-penguin"></div>
-          <div class="iceberg iceberg-left"></div>
-          <div class="iceberg iceberg-right"></div>
-          <div class="iceberg iceberg-middle"></div>
-        </div>
+      <div class="sky">
+        <div id="albertsons-penguin"></div>
+        <div class="iceberg iceberg-left"></div>
+        <div class="iceberg iceberg-right"></div>
+        <div class="iceberg iceberg-middle"></div>
+      </div>
 
-        <div class="ocean">
-          <div class="bubble-container">
-            <div class="bubble bubble--1"></div>
-            <div class="bubble bubble--2"></div>
-            <div class="bubble bubble--3"></div>
-            <div class="bubble bubble--4"></div>
-            <div class="bubble bubble--5"></div>
-            <div class="bubble bubble--6"></div>
-            <div class="bubble bubble--7"></div>
-            <div class="bubble bubble--8"></div>
-            <div class="bubble bubble--9"></div>
-            <div class="bubble bubble--10"></div>
-            <div class="bubble bubble--11"></div>
-            <div class="bubble bubble--12"></div>
-          </div>
-          <div class="penguin-container">
-            <div id="nutpods-penguin"></div>
-            <div id="miltons-penguin"></div>
-            <div id="icelandic-penguin"></div>
-            <div id="praegers-penguin"></div>
-            <div id="oatly-penguin"></div>
-          </div>
-            <Quiz />
+      <div class="ocean">
+        <div class="bubble-container">
+          <div class="bubble bubble--1"></div>
+          <div class="bubble bubble--2"></div>
+          <div class="bubble bubble--3"></div>
+          <div class="bubble bubble--4"></div>
+          <div class="bubble bubble--5"></div>
+          <div class="bubble bubble--6"></div>
+          <div class="bubble bubble--7"></div>
+          <div class="bubble bubble--8"></div>
+          <div class="bubble bubble--9"></div>
+          <div class="bubble bubble--10"></div>
+          <div class="bubble bubble--11"></div>
+          <div class="bubble bubble--12"></div>
         </div>
-      </main>
+        <div class="penguin-container">
+          <div id="nutpods-penguin"></div>
+          <div id="miltons-penguin"></div>
+          <div id="icelandic-penguin"></div>
+          <div id="praegers-penguin"></div>
+          <div id="oatly-penguin"></div>
+        </div>
+          <Quiz />
+      </div>
     </div>
   );
 }

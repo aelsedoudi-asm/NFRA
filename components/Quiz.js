@@ -50,9 +50,15 @@ export default function Quiz() {
             {!showResult ? (
             <div>
                 <div className="question-count-container">
-                    <span className="active-question-no">{activeQuestion + 1}</span>
-                    <span className="out-of"> out of </span>
-                    <span className="total-question">{questions.length}</span>
+                    <div className="question-count-internal">
+                        <div className="question-count-left">
+                            <span className="active-question-no">{activeQuestion + 1}</span>
+                            <span className="out-of"> out of </span>
+                        </div>
+                        <div className="question-count-right">
+                            <span className="total-question">{questions.length}</span>
+                        </div>
+                    </div>
                 </div>
                 <h2>{question}</h2>
                 <ul>
@@ -62,12 +68,12 @@ export default function Quiz() {
                             onClick={() => onAnswerSelected(answer, index)}
                             key={answer}
                             className={selectedAnswerIndex === index ? 'selected-answer' : null}>
-                            {answer}
+                            <p>{answer}</p>
                         </li>
                     </div>
                 ))}
                 </ul>
-                <div className="flex-right">
+                <div className="flex-center">
                     <button onClick={onClickNext} disabled={selectedAnswerIndex === null}>
                         {activeQuestion === questions.length - 1 ? 'Finish' : 'Next'}
                     </button>
@@ -75,21 +81,22 @@ export default function Quiz() {
             </div>
             ) : (
             <div className="result">
-            <h3>Result</h3>
-            <p>
-                Total Question: <span>{questions.length}</span>
-            </p>
-            <p>
-                Total Score:<span> {result.score}</span>
-            </p>
-            <p>
-                Correct Answers:<span> {result.correctAnswers}</span>
-            </p>
-            <p>
-                Wrong Answers:<span> {result.wrongAnswers}</span>
-            </p>
+                <h3>Results</h3>
+                <p>
+                    Total Score:<span> {result.score}</span>
+                </p>
+                <p>
+                    Correct Answers:<span> {result.correctAnswers}</span>
+                </p>
+                <p>
+                    Wrong Answers:<span> {result.wrongAnswers}</span>
+                </p>
             </div>
         )}
         </div>
     )
 }
+
+/*<p>
+    Total Question: <p>{questions.length}</p>
+</p>*/
