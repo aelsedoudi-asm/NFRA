@@ -2,19 +2,17 @@
 // 1. MCQs | Multiple Choice | single
 
 export const quiz = {
-    topic: 'Javascript',
-    level: 'Beginner',
     totalQuestions: 15,
     perQuestionScore: 5,
     questions: [
       {
         question: 'Which hockey team has won the most Stanley Cups?',
         choices: [
-        'Montreal Canadiens (24)', 
-        'Toronto Maple Leafs (13)', 
-        'Detroit Red Wings (11)'],
+        'Montreal Canadiens', 
+        'Toronto Maple Leafs', 
+        'Detroit Red Wings'],
         type: 'MCQs',
-        correctAnswer: 'Montreal Canadiens (24)',
+        correctAnswer: 'Montreal Canadiens',
       },
       {
         question: 'Where was the coldest temperature recorded in the mainland US (-70F)?',
