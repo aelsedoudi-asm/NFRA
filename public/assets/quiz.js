@@ -83,7 +83,7 @@ export const quiz = {
         correctAnswer: 'Fro-zone',
       },
       {
-        question: 'WWhat viral video "challenge" from 2014 helped raise $220 million dollars for ALS research?',
+        question: 'What viral video "challenge" from 2014 helped raise $220 million dollars for ALS research?',
         choices: [
             'The Ice-Bucket Challenge',
             'The Ice-Tea Challenge',

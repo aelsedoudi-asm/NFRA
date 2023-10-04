@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { quiz } from '../public/assets/quiz.js'
 import styles from './Quiz.module.css';
 
@@ -12,11 +12,33 @@ export default function Quiz() {
       correctAnswers: 0,
       wrongAnswers: 0,
     })
+
+    const [counter, setCounter] = useState(0);
+    const [running, setRunning] = useState(false);
+
+    useEffect(() => {
+        let interval;
+    
+        if (!running) {
+          return () => {};
+        }
+    
+        console.log("Running!");
+        interval = setInterval(() => {
+          setCounter((counter) => counter + 1);
+        }, 1000);
+    
+        return () => {
+          console.log("Stopped!");
+          clearInterval(interval);
+        };
+      }, [running]);
   
     const { questions } = quiz
     const { question, choices, correctAnswer } = questions[activeQuestion]  
 
     const onClickNext = () => {
+        setRunning(true);
         setSelectedAnswerIndex(null)
         setResult((prev) =>
           selectedAnswer
@@ -30,6 +52,7 @@ export default function Quiz() {
         if (activeQuestion !== questions.length - 1) {
           setActiveQuestion((prev) => prev + 1)
         } else {
+          setRunning(false);
           setActiveQuestion(0)
           setShowResult(true)
         }
@@ -39,7 +62,6 @@ export default function Quiz() {
         setSelectedAnswerIndex(index)
         if (answer === correctAnswer) {
           setSelectedAnswer(true)
-          console.log("Right")
         } else {
           setSelectedAnswer(false)
         }
@@ -90,6 +112,9 @@ export default function Quiz() {
                 </p>
                 <p>
                     Wrong Answers:<span> {result.wrongAnswers}</span>
+                </p>
+                <p>
+                    Total Time: <span>{counter}</span> Seconds
                 </p>
             </div>
         )}
