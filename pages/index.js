@@ -43,6 +43,17 @@ export default function Home() {
           <div id="oatly-penguin"></div>
         </div>
           <Quiz />
+        <div class="designed-by">
+          <div class="designed-by-text">
+            <p>designed by</p>
+          </div>
+          <div class="designed-by-logo">
+            <img
+              src="/assets/MarketingLogo.png"
+              height="55"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
